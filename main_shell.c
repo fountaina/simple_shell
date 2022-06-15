@@ -116,7 +116,7 @@ void main(void)
 	int status;
 
 	do {
-		printf("#fountain-shell$ ");
+		printf("#Alpha-shell$ ");
 		line = line_reader();
 		commands = line_parser(line);
 		status = executioner(commands);
