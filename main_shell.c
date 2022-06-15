@@ -35,7 +35,7 @@ char *line_reader(void)
 }
 
 /**
- * line_splitter - splits the line of text inputed
+ * line_parser - splits the line of text inputed
  * @line: the line from stdin
  *
  * Return: an array of string pointers.
@@ -105,7 +105,7 @@ int executioner(char **parsed_line)
 }
 
 /**
- * shell_loop - contains the loop for the shell
+ * main  - contains the loop for the shell
  *
  * Return: returns nothing
  */
@@ -116,7 +116,7 @@ int  main(void)
 	int status;
 
 	do {
-		printf("#Alpha-shell$ ");
+		printf("($) ");
 		line = line_reader();
 		commands = line_parser(line);
 		status = executioner(commands);
