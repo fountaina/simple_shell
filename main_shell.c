@@ -17,7 +17,7 @@
 char *line_reader(void)
 {
 	char *line = NULL;
-	ssize_t len = 0;
+	size_t len = 0;
 
 	if (getline(&line, &len, stdin) == -1)
 	{
@@ -109,7 +109,7 @@ int executioner(char **parsed_line)
  *
  * Return: returns nothing
  */
-void main(void)
+int  main(void)
 {
 	char *line;
 	char **commands;
@@ -124,4 +124,5 @@ void main(void)
 		free(line);
 		free(commands);
 	} while (status);
+	return (0);
 }
